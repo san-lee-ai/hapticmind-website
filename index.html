@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HapticMind - Mindful Meditation with Haptic Guidance</title>
+    <title>HapticMind: Meditate by Touch</title>
+    <meta name="description" content="Breathing you can feel. Gentle taps guide each breath on iPhone and Apple Watch, so you can meditate with your eyes closed. Free on the App Store.">
+    <meta name="theme-color" content="#6600cc">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header class="hero">
         <div class="container">
-            <h1>HapticMind</h1>
-            <p>Mindful taps for meditation</p>
-            <nav>
+            <nav class="site-nav">
+                <a class="brand" href="index.html"><img src="images/icon.png" alt="" width="36" height="36"><span>HapticMind</span></a>
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="roadmap.html">Roadmap</a></li>
@@ -20,251 +23,137 @@
                     <li><a href="terms.html">Terms of Use</a></li>
                 </ul>
             </nav>
+            <div class="hero-body">
+                <div class="hero-copy">
+                    <h1>Breathing you can feel</h1>
+                    <p>Gentle taps guide each breath, so you can close your eyes and follow along by touch, with no screen to watch and no voice to listen to.</p>
+                    <a class="store-badge" href="https://apps.apple.com/us/app/hapticmind-meditate-by-touch/id6746279573">
+                        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" height="52">
+                    </a>
+                    <p class="hero-note">Free on iPhone and Apple Watch</p>
+                </div>
+                <div class="breath" aria-hidden="true">
+                    <div class="breath-ring"></div>
+                    <div class="breath-circle"></div>
+                    <div class="breath-labels"><span>Inhale</span><span>Hold</span><span>Exhale</span><span>Hold</span></div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <section id="intro">
-        <div class="container">
-            <h2>Welcome to HapticMind</h2>
-            <p>Experience guided meditation through rhythmic wrist taps, seamlessly integrated with your Apple Watch. Customize your sessions, track your progress, and explore haptic patterns to enhance your mindfulness journey.</p>
-        </div>
-    </section>
-
-    <section id="features">
-        <div class="container">
-            <h2>App Features</h2>
-            <div class="feature-grid">
-                <!-- Home Screen -->
-                <div class="feature-item">
-                    <div class="media-container">
-                        <img src="screenshots/home.png" alt="HapticMind Home Screen" class="screenshot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder">
-                            <p>[Insert Home Screen Screenshot]</p>
-                        </div>
-                        <video class="video-placeholder" muted loop>
-                            <source src="videos/home.mp4" type="video/mp4">
-                            [Insert Home Screen Video]
-                        </video>
-                    </div>
-                    <h3>Home</h3>
-                    <p>The Home screen is your gateway to HapticMind. Access guided meditation sessions, learn about haptic patterns, customize settings, and track your progress. The clean interface supports both light and dark modes for a comfortable experience.</p>
-                </div>
-
-                <!-- Meditation Session -->
-                <div class="feature-item">
-                    <div class="media-container">
-                        <div class="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item">
-                                    <img src="screenshots/meditation_session_1.png" alt="Meditation Session Screenshot 1" class="screenshot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                                    <div class="image-placeholder">
-                                        <p>[Insert Meditation Session Screenshot 1]</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="screenshots/meditation_session_2.png" alt="Meditation Session Screenshot 2" class="screenshot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                                    <div class="image-placeholder">
-                                        <p>[Insert Meditation Session Screenshot 2]</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="screenshots/meditation_session_3.png" alt="Meditation Session Screenshot 3" class="screenshot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                                    <div class="image-placeholder">
-                                        <p>[Insert Meditation Session Screenshot 3]</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carousel-next"><i class="fas fa-chevron-right"></i></i></button>
-                            <div class="carousel-indicators">
-                                <span class="indicator active"></span>
-                                <span class="indicator"></span>
-                                <span class="indicator"></span>
-                            </div>
-                        </div>
-                        <video class="video-placeholder" muted loop>
-                            <source src="videos/meditation_session.mp4" type="video/mp4">
-                            [Insert Meditation Session Video]
-                        </video>
-                    </div>
-                    <h3>Meditation Session</h3>
-                    <p>Start a guided meditation with haptic feedback to guide your breathing. Choose your pattern, duration, and follow the rhythmic taps. The interface displays a timer, breathing phase, and Apple Watch connection status, with options to pause or end the session.</p>
-                </div>
-
-                <!-- Learning Session -->
-                <div class="feature-item">
-                    <div class="media-container">
-                        <div class="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item">
-                                    <img src="screenshots/learning_session_1.png" alt="Learning Session Screenshot 1" class="screenshot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                                    <div class="image-placeholder">
-                                        <p>[Insert Learning Session Screenshot 1]</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="screenshots/learning_session_2.png" alt="Learning Session Screenshot 2" class="screenshot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                                    <div class="image-placeholder">
-                                        <p>[Insert Learning Session Screenshot 2]</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="screenshots/learning_session_3.png" alt="Learning Session Screenshot 3" class="screenshot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                                    <div class="image-placeholder">
-                                        <p>[Insert Learning Session Screenshot 3]</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carousel-next"><i class="fas fa-chevron-right"></i></i></button>
-                            <div class="carousel-indicators">
-                                <span class="indicator active"></span>
-                                <span class="indicator"></span>
-                                <span class="indicator"></span>
-                            </div>
-                        </div>
-                        <video class="video-placeholder" muted loop>
-                            <source src="videos/learning_session.mp4" type="video/mp4">
-                            [Insert Learning Session Video]
-                        </video>
-                    </div>
-                    <h3>Learning Session</h3>
-                    <p>Explore and test different haptic patterns to find what suits you best. Each pattern comes with a description and a "Try" button to experience the haptic feedback in real-time, helping you understand how each pattern feels.</p>
-                </div>
-
-                <!-- Settings -->
-                <div class="feature-item">
-                    <div class="media-container">
-                        <img src="screenshots/settings.png" alt="HapticMind Settings" class="screenshot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder">
-                            <p>[Insert Settings Screenshot]</p>
-                        </div>
-                        <video class="video-placeholder" muted loop>
-                            <source src="videos/settings.mp4" type="video/mp4">
-                            [Insert Settings Video]
-                        </video>
-                    </div>
-                    <h3>Settings</h3>
-                    <p>Customize your meditation experience by adjusting session duration, haptic strength, and breathing patterns (Box, 4-7-8, or Custom). The settings page also provides information about each pattern to guide your choices.</p>
-                </div>
-
-                <!-- Progress -->
-                <div class="feature-item">
-                    <div class="media-container">
-                        <img src="screenshots/progress.png" alt="HapticMind Progress" class="screenshot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder">
-                            <p>[Insert Progress Screenshot]</p>
-                        </div>
-                        <video class="video-placeholder" muted loop>
-                            <source src="videos/progress.mp4" type="video/mp4">
-                            [Insert Progress Video]
-                        </video>
-                    </div>
-                    <h3>Progress</h3>
-                    <p>Track your meditation journey with stats like weekly sessions, total sessions, day streak, average duration, and favorite pattern. A weekly chart visualizes your activity, motivating you to maintain consistency.</p>
-                </div>
-
-                <!-- Watch App -->
-                <div class="feature-item">
-                    <div class="media-container">
-                        <div class="carousel watch-carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item">
-                                    <img src="screenshots/watch_app_1.png" alt="Watch App Screenshot 1" class="screenshot watch-screenshot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                                    <div class="image-placeholder watch-placeholder">
-                                        <p>[Insert Watch App Screenshot 1]</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="screenshots/watch_app_2.png" alt="Watch App Screenshot 2" class="screenshot watch-screenshot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                                    <div class="image-placeholder watch-placeholder">
-                                        <p>[Insert Watch App Screenshot 2]</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="screenshots/watch_app_3.png" alt="Watch App Screenshot 3" class="screenshot watch-screenshot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                                    <div class="image-placeholder watch-placeholder">
-                                        <p>[Insert Watch App Screenshot 3]</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carousel-next"><i class="fas fa-chevron-right"></i></i></button>
-                            <div class="carousel-indicators">
-                                <span class="indicator active"></span>
-                                <span class="indicator"></span>
-                                <span class="indicator"></span>
-                            </div>
-                        </div>
-                        <video class="video-placeholder watch-video-placeholder" muted loop>
-                            <source src="videos/watch_app.mp4" type="video/mp4">
-                            [Insert Watch App Video]
-                        </video>
-                    </div>
-                    <h3>Watch App</h3>
-                    <p>The Apple Watch app delivers haptic feedback directly to your wrist. View the timer, current breathing phase, and control your session with play/pause and end buttons, all in a compact, user-friendly interface.</p>
+    <main>
+        <section class="band">
+            <div class="container showcase">
+                <img class="phone" src="screenshots/app_home.png" alt="HapticMind Home, with this week's days, a Begin button, and rows for Start Session, Learn Haptics, Progress and Settings" loading="lazy">
+                <div class="showcase-copy">
+                    <h2>One tap to begin</h2>
+                    <p>Home shows your week at a glance, and starts a session with your usual choices. Whether you're sighted, blind or simply looking for some quiet, HapticMind keeps things simple.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="download">
-        <div class="container">
-            <h2>Get HapticMind</h2>
-            <p>Download HapticMind today and start your mindfulness journey with haptic-guided meditation.</p>
-            <div class="download-buttons">
-                <a href="https://apps.apple.com/us/app/hapticmind-meditate-by-touch/id6746279573" class="btn">
-                    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" style="height: 40px; vertical-align: middle; margin-right: 10px;">
-                    Download on the App Store
+        <section class="band alt">
+            <div class="container showcase flip">
+                <img class="phone" src="screenshots/app_setup.png" alt="Session setup with a live preview of the breathing pattern, pattern cards and session lengths" loading="lazy">
+                <div class="showcase-copy">
+                    <h2>Breathe by touch</h2>
+                    <ul class="ticks">
+                        <li>Box and 4-7-8 breathing, with a different feel for each phase</li>
+                        <li>Soft, Medium or Strong taps</li>
+                        <li>5, 10 and 15 minute sessions</li>
+                        <li>Learn Haptics lets you try two breaths of any pattern before you begin</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="band session">
+            <div class="container showcase">
+                <img class="phone" src="screenshots/app_session.png" alt="The session screen: a glowing breathing circle reading Inhale, inside a ring, with the time left and Pause and End buttons" loading="lazy">
+                <div class="showcase-copy">
+                    <h2>A calm session screen</h2>
+                    <p>A quiet countdown, then a dark screen where the circle breathes inside a ring that fills as the session passes. Pause, resume or end any time.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="band alt">
+            <div class="container showcase flip">
+                <div class="watches">
+                    <img src="screenshots/app_watch_home.png" alt="HapticMind on Apple Watch, ready to start" loading="lazy">
+                    <img src="screenshots/app_watch_session.png" alt="A session running on Apple Watch" loading="lazy">
+                </div>
+                <div class="showcase-copy">
+                    <h2>Made for Apple Watch</h2>
+                    <ul class="ticks">
+                        <li>Run a session on your wrist, by itself or alongside your iPhone</li>
+                        <li>Taps keep going with your wrist down</li>
+                        <li>A session on both devices only counts once</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="band">
+            <div class="container showcase">
+                <img class="phone" src="screenshots/app_progress.png" alt="Progress, with days this week, total sessions, streak and a weekly chart" loading="lazy">
+                <div class="showcase-copy">
+                    <h2>See your progress</h2>
+                    <p>Your week at a glance, total sessions and your streak, for everyone. If you bought an earlier version, your settings and progress carry over.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="band plus">
+            <div class="container showcase flip">
+                <img class="phone" src="screenshots/app_reminders.png" alt="Settings with a reminder time, chosen days and an option to skip if you've already meditated" loading="lazy">
+                <div class="showcase-copy">
+                    <h2>Become a Supporter</h2>
+                    <p>Guided sessions stay free for everyone. HapticMind Plus adds more for you, and keeps this small app growing.</p>
+                    <ul class="ticks">
+                        <li>Design your own breathing pattern</li>
+                        <li>Meditate for any length, from 1 to 60 minutes</li>
+                        <li>A gentle reminder on the days you choose, skipped if you've already meditated</li>
+                        <li>Your heart rate before and during sessions</li>
+                        <li>Trends and session history</li>
+                        <li>Your choice of breathing circle colours</li>
+                    </ul>
+                    <p class="small">Available monthly, yearly or as a one-time Lifetime Supporter purchase. If you bought HapticMind before it became free, Plus is yours for life, with our thanks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="band alt">
+            <div class="container">
+                <h2 class="center">Private by design</h2>
+                <div class="promises">
+                    <div class="card"><h3>No account</h3><p>Open the app and begin. There's nothing to sign up for.</p></div>
+                    <div class="card"><h3>No ads or tracking</h3><p>Your sessions stay on your device.</p></div>
+                    <div class="card"><h3>Apple Health is optional</h3><p>Sessions work fully without it.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="band cta">
+            <div class="container">
+                <h2>Close your eyes and begin</h2>
+                <a class="store-badge" href="https://apps.apple.com/us/app/hapticmind-meditate-by-touch/id6746279573">
+                    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" height="52">
                 </a>
+                <p><a href="roadmap.html">See what's coming next</a></p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>© 2025 AME Mobile Inc. All rights reserved.</p>
+            <p>© 2026 <a href="https://amemobile.ca/">AME Mobile Inc.</a> All rights reserved.</p>
             <ul class="footer-links">
                 <li><a href="privacy.html">Privacy Policy</a></li>
                 <li><a href="terms.html">Terms of Use</a></li>
             </ul>
+            <p class="footer-note">HapticMind is a wellness tool. It is not a medical device and does not diagnose or treat any condition. If you have concerns about your health, please see a healthcare professional.</p>
         </div>
     </footer>
-
-    <script>
-        document.querySelectorAll('.carousel').forEach(carousel => {
-            const inner = carousel.querySelector('.carousel-inner');
-            const items = carousel.querySelectorAll('.carousel-item');
-            const indicators = carousel.querySelectorAll('.carousel-indicators .indicator');
-            let currentIndex = 0;
-
-            function updateCarousel() {
-                inner.style.transform = `translateX(-${currentIndex * 100}%)`;
-                indicators.forEach((indicator, index) => {
-                    indicator.classList.toggle('active', index === currentIndex);
-                });
-            }
-
-            carousel.querySelector('.carousel-prev').addEventListener('click', () => {
-                currentIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-                updateCarousel();
-            });
-
-            carousel.querySelector('.carousel-next').addEventListener('click', () => {
-                currentIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-                updateCarousel();
-            });
-
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                    currentIndex = index;
-                    updateCarousel();
-                });
-            });
-
-            // Initialize carousel
-            updateCarousel();
-        });
-    </script>
 </body>
 </html>
